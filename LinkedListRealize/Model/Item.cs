@@ -5,12 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LinkedListRealize.Model;
+/// <summary>
+/// Ячейка списка
+/// </summary>
 public class Item<T>
 {
     private T data = default(T);
 
     private Item<T> next = null;
 
+    /// <summary>
+    ///  Данные хранимые в ячейке списка
+    /// </summary> 
     public T Data
     {
         get
@@ -25,6 +31,9 @@ public class Item<T>
                 throw new ArgumentNullException(nameof(value));    
         }
     }
+    /// <summary>
+    /// Следующая ячейка списка
+    /// </summary>
     public Item<T> Next { get; set;}
 
     public  Item(T data)
